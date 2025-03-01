@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SpotilightController.GUI"
+             Padding="5">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".05*"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Label Text="Insert your spotilight server details"
+               Style="{StaticResource SubHeadline}"
+        />
+
+        <StackLayout Grid.Row="1">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="0.3*"/>
+                </Grid.ColumnDefinitions>
+
+                <Entry Placeholder="Server Address" />
+                <Entry Grid.Column="1" Placeholder="Server Port" />
+            </Grid>
+
+            <Button Text="Connect" Margin="5, 0, 5, 0" />
+
+            <Grid Margin="0, 20, 0, 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Status: " Style="{StaticResource SubHeadline}"/>
+                <Label Text="" Grid.Column="1" />
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Switch x:Name="bulbSwitch" Margin="0, 0, 4, 0" />
+                <Label x:Name="bulbLbl" Grid.Column="1" FontSize="Large" VerticalTextAlignment="Center" />
+            </Grid>
+            
+            <Button Margin="5, 10, 5, 0" Text="Change Color" />
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
